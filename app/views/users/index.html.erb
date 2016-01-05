@@ -1,0 +1,99 @@
+<% content_for(:title, "Perfil de #{@user.first_name} #{@user.last_name}" )%>
+
+<div id="user-info" data-id="<%= @user.id %>"></div>
+
+<div class="theme-bg profile">
+
+  <div class="col-md-12">
+
+    <div class="profile-area">
+
+      <div class="photo-border">
+
+        <div class="photo-user">
+          <img src="//graph.facebook.com/<%= @user.uid if @user.uid %>/picture?type=large&width=345" alt="<%= @user.first_name %> <%= @user.last_name %>" />
+        </div>
+
+        <div class="clearfix"></div>
+
+      </div>
+
+      <div class="pull-left">
+
+        <h3 class="profile-area-title">E ai <%= @user.first_name %>, como estão as coisas contigo?</h3>
+
+        <div class="people-access">
+
+          <div>
+            <i class="fa fa-line-chart"></i>
+            <p><%= raw t('peopleaccess', :count => @total) %></p>
+          </div>
+
+          <div>
+            <p><%= raw t('peopleaccesstoday', :count => @todayTotal) %></p>
+          </div>
+
+        </div>
+
+        <div class="person-stats">
+
+          <p class="stats-fiu-fiu" <% if @user.get_likes.size > @user.get_dislikes.size %>style="color:#7FC103"<% end %> ><i class="fa fa-thumbs-up"></i>&nbsp;<strong><%= @user.get_likes.size %></strong> Fiu-Fiu</p>
+
+          <p class="stats-sai-fora" <% if @user.get_likes.size < @user.get_dislikes.size %>style="color:#D13E00"<% end %> ><i class="fa fa-thumbs-down"></i>&nbsp;<strong><%= @user.get_dislikes.size %></strong> Sai fora</p>
+
+        </div>
+
+        <small class="profile-small">* Você consegue ver as pessoas que Cariocaram você, mas não consegue saber quem Cariocou o que.</small>
+
+        <a href="/<%= @user.username %>" class="btn btn-lg btn-my-page btn-block">
+          <i class="fa fa-rocket"></i>
+          <span>Convidar meus amigos</span>
+          <strong>Ir para minha página</strong>
+        </a>
+
+      </div>
+
+    </div>
+
+    <div class="profile-chenge-photo">
+
+      <img src="<%= asset_path 'arrow2.png' %>" class="arrow_left" />
+
+      <p>Essa é a foto que você usa no Facebook.<br />Para trocar a foto basta acessar o Facebook e trocar sua foto de perfil.</p>
+
+    </div>
+
+  </div>
+
+</div>
+
+
+<div class="clearfix"></div>
+
+<section class="people-others">
+
+  <div class="container">
+
+    <div class="content-about">
+
+      <h3><%=raw  t('peoplecariocou', :count => @usersLikesTotal ) %></h3>
+      <% if @usersLikesTotal < 5 %>
+      <h5>Ihhh mas para saber quem te Cariocou precisa ter no mínimo 5 Cariocadas. <br /><strong><%=raw  t('peoplecariocoulack', :count => (5-@usersLikesTotal) ) %></strong>. <br />Corra e chame seus amigos!!!</h5>
+      <% end %>
+
+      <div class="people-list">
+
+        <% if @usersLikesTotal < 5 %>
+          <%= render partial: "listsecret", locals: { users: @usersLikes } %>
+        <% else %>
+          <%= render partial: "list", locals: { users: @usersLikes } %>
+          <%= paginate @usersLikes %>
+        <% end %>
+
+      </div>
+
+    </div>
+
+  </div>
+
+</section>

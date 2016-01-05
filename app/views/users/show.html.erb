@@ -1,0 +1,146 @@
+<% content_for(:title, "#{@user.first_name} #{@user.last_name} merece um fiu-fiu ou sai fora?" )%>
+<% content_for(:description, "Quer Cariocar? Vem pro jogo! #{@user.first_name} #{@user.last_name} merece um Fiu-Fiu ou Sai fora? Chegou a hora da verdade, compartilhelhe muito com seus amigos e descobra como está a popularidade." )%>
+<% content_for(:image, "//graph.facebook.com/#{@user.uid}/picture?type=large&width=345") %>
+
+
+<div id="user-info" data-id="<%= @user.id %>"></div>
+
+<div class="theme-bg">
+
+  <div class="col-md-12">
+
+    <div class="photo-area">
+
+      <div class="photo-border">
+
+        <div class="suggest-users">
+          <h4>Continue Cariocando</h4>
+          <% @suggestUsers.each do |suggestUser| %>
+            <a href="/<%= suggestUser.username%>"><img src="//graph.facebook.com/<%= suggestUser.uid%>/picture?type=large&width=110" /></a>
+          <% end %>
+        </div>
+
+        <div class="photo-user">
+          <img src="//graph.facebook.com/<%= @user.uid if @user.uid %>/picture?type=large&width=345" alt="<%= @user.first_name %> <%= @user.last_name %>" />
+        </div>
+
+        <div class="clearfix"></div>
+
+        <div class="btn-group">
+        <% if current_user.nil? %>
+          <button type="button" class="btn btn-primary btn-fiu-fiu" data-option="fiu-fiu" data-action="like" data-toggle="modal" href="/authenticate" data-target="#cmodal" ><i class="fa fa-thumbs-up"></i>&nbsp;&nbsp;Fiu-Fiu</button>
+          <button type="button" class="btn btn-primary btn-sai-fora" data-option="sai-fora" data-action="dislike" data-toggle="modal" href="/authenticate" data-target="#cmodal" ><i class="fa fa-thumbs-down"></i>&nbsp;&nbsp;Sai Fora</button>
+        <% else %>
+
+          <% if current_user.id == @user.id %>
+
+            <button type="button" class="btn btn-primary btn-fiu-fiu btn-lock" data-action="off" ><i class="fa fa-lock"></i>&nbsp;&nbsp;Fiu-Fiu</button>
+            <button type="button" class="btn btn-primary btn-sai-fora btn-lock" data-action="off" ><i class="fa fa-lock"></i>&nbsp;&nbsp;Sai Fora</button>
+
+          <% else %>
+
+            <button type="button" class="btn btn-primary btn-fiu-fiu" data-option="fiu-fiu" data-action="like" ><i class="fa fa-thumbs-up"></i>&nbsp;&nbsp;Fiu-Fiu</button>
+            <button type="button" class="btn btn-primary btn-sai-fora" data-option="sai-fora" data-action="dislike" ><i class="fa fa-thumbs-down"></i>&nbsp;&nbsp;Sai Fora</button>
+
+          <% end %>
+
+        <% end %>
+      </div>
+
+      </div>
+
+      <div class="pull-left">
+
+        <div class="people-access">
+          <i class="fa fa-line-chart"></i>
+          <p><%= raw t('peopleaccess', :count => @total) %></p>
+        </div>
+
+
+        <h1 class="text-center"><%= @user.first_name %> <%= @user.last_name %></h1>
+
+        <div class="person-stats">
+
+          <p class="stats-fiu-fiu" <% if @user.get_likes.size > @user.get_dislikes.size %>style="color:#7FC103"<% end %> ><i class="fa fa-thumbs-up"></i>&nbsp;<strong><%= @user.get_likes.size %></strong> Fiu-Fiu</p>
+
+          <p class="stats-sai-fora" <% if @user.get_likes.size < @user.get_dislikes.size %>style="color:#D13E00"<% end %> ><i class="fa fa-thumbs-down"></i>&nbsp;<strong><%= @user.get_dislikes.size %></strong> Sai fora</p>
+
+        </div>
+
+        <h5>E ai, <%= @user.first_name %> merece um <strong>fiu-fiu</strong> ou <strong>sai fora</strong>?</h5>
+
+        <div class="ads-profile">
+
+
+          <script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+          <ins class="adsbygoogle"
+               style="display:inline-block;width:320px;height:100px"
+               data-ad-client="ca-pub-5334817241886371"
+               data-ad-slot="1285443248"></ins>
+          <script>
+          (adsbygoogle = window.adsbygoogle || []).push({});
+          </script>
+
+
+        </div>
+
+        <a href="https://www.facebook.com/sharer/sharer.php?u=<%= request.original_url %>" target="_blank" class="btn btn-lg btn-block omb_btn-facebook">
+          <i class="fa fa-facebook-official"></i>
+          <span>Compartilhe no Facebook</span>
+          <strong>Convide seus amigos</strong>
+        </a>
+
+      </div>
+
+    </div>
+
+  </div>
+
+</div>
+
+<div class="clearfix"></div>
+
+<section class="people-others">
+
+  <div class="container">
+
+    <div class="content-about">
+
+      <h3><strong>Já deu uma Cariocada hoje?</strong> Continue a Cariocar acessando outras pessoas</h3>
+
+      <div class="people-list">
+
+        <%= render partial: "list", locals: { users: @users } %>
+
+      </div>
+
+    </div>
+
+  </div>
+
+</section>
+
+<section data-turbolinks-permanent>
+<% unless current_user %>
+
+
+  <div class="container-fluid">
+
+    <div class="content-about">
+
+      <h3><strong>Tem coragem? Vem pro jogo!</strong> Comece agora a receber <b>fiu-fiu</b> ou <b>sai fora</b>.</h3>
+
+
+      <a href="/auth/signin" class="btn btn-lg btn-block omb_btn-facebook">
+        <i class="fa fa-facebook-official"></i>
+        <span>Conectar com Facebook</span>
+        <strong>Começar agora o Jogo</strong>
+      </a>
+
+    </div>
+
+  </div>
+
+<% end if %>
+
+</section>

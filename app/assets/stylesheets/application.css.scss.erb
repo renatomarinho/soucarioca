@@ -1,0 +1,1050 @@
+/*
+ *
+ *= require font-awesome
+ *= require_tree .
+ *= require_self
+ */
+
+$border-radius: 4px;
+$text-shadow: 1px 1px 3px #000;
+
+
+footer
+{
+    min-width:1040px;
+    padding:20px;
+    background:#0C5373;
+    border-top:8px solid #157293;
+}
+
+footer p,
+footer small
+{
+  display:block;
+  text-align:center;
+  color:#9BC9DD;
+  margin:10px 0 5px;
+  font-size:10pt;
+  font-weight:300;
+}
+
+footer p
+{
+  margin:40px 0 5px;
+  font-size:20pt;
+  font-weight:700;
+  font-family: 'Annie Use Your Telescope', cursive;
+}
+
+footer .ft-links
+{
+  text-align:center;
+}
+
+footer .ft-links a,
+footer .ft-links span
+{
+  font-size:12pt;
+  color:#fff;
+  padding:0 20px;
+}
+
+footer .ft-links span
+{
+  color:#73C7E2
+}
+
+.tip-final
+{
+  display:table;
+  position:relative;
+  width:720px;
+  top:-40px;
+  margin:0 auto -55px !important;
+}
+
+.arrow_left{
+  position:absolute;
+  top:-10px;
+  left:115px;
+  -webkit-transform: rotate(130deg);
+  -moz-transform: rotate(130deg);
+  -o-transform: rotate(130deg);
+  writing-mode: tb-rl;
+}
+
+.profile-chenge-photo
+{
+  top:-10px;
+  position:relative;
+  left:-50px;
+  width:370px;
+  margin:0 auto;
+}
+
+.profile-chenge-photo .arrow_left{
+  left:0;
+  -webkit-transform: rotate(157deg) !important;
+  -moz-transform: rotate(157deg) !important;
+  -o-transform: rotate(157deg) !important;
+}
+
+.profile-chenge-photo p
+{
+  position:relative;
+  color:#777;
+  font-size:18pt;
+  font-weight:300;
+  top:15px;
+  left:150px;
+  font-family: 'Annie Use Your Telescope', cursive;
+}
+
+.catf
+{
+  margin-right:80px;
+  opacity:0.3;
+}
+
+.arrow_left_text
+{
+  position:absolute;
+  top:155px;
+  right:95px;
+  width:150px;
+  color:#6B6B6B;
+  font-size:14pt !important;
+  line-height:16pt;
+}
+
+.content-about .fa-heartbeat
+{
+  position:relative;
+  top:68px;
+  color:red;
+  font-size:68pt;
+}
+
+.arrow_right{
+  position:absolute;
+  top:120px;
+  right:90px;
+  -webkit-transform: rotate(110deg);
+  -moz-transform: rotate(110deg);
+  -o-transform: rotate(110deg);
+  writing-mode: tb-rl;
+}
+
+.arrow_right_text
+{
+  position:absolute;
+  top:40px;
+  left:120px;
+  width:130px;
+  color:#6B6B6B;
+  font-size:14pt !important;
+  line-height:16pt;
+}
+
+.catm
+{
+  margin-left:145px;
+  opacity:0.3;
+}
+
+.omb_btn-facebook {
+  background: #3b5998;
+  width:360px;
+  margin:50px auto 30px;
+  opacity:1;
+  -webkit-transition: background  0.2s ease-in-out;
+  -moz-transition:background  0.2s ease-in-out;
+  -o-transition: background  0.2s ease-in-out;
+  transition: background  0.2s ease-in-out;
+}
+
+.btn-my-page
+{
+  background:#F99D2B;
+  width:360px;
+  margin:17px 0 -7px 10px;
+  opacity:1;
+  -webkit-transition: background  0.2s ease-in-out;
+  -moz-transition:background  0.2s ease-in-out;
+  -o-transition: background  0.2s ease-in-out;
+  transition: background  0.2s ease-in-out;
+}
+
+.photo-area .omb_btn-facebook
+{
+  position:absolute;
+  top:269px;
+  border-radius:0;
+  width: 444px;
+  background:#0E416D
+}
+
+.modal-body .omb_btn-facebook
+{
+  width: 365px;
+  margin:20px auto 40px;
+}
+
+.navbar .omb_btn-facebook {
+  width:205px;
+  float:left;
+  margin:8px 0 0 0;
+  padding:6px 0 6px 10px !important;
+}
+
+.navbar .omb_btn-facebook span
+{
+  font-weight:400;
+  display:block;
+  position:relative;
+  top:-1px;
+}
+
+.omb_btn-facebook:hover,
+.navbar .omb_btn-facebook:hover,
+.navbar .omb_btn-facebook:focus {
+  background:#031C4F !important;
+}
+
+.btn-my-page:hover
+{
+  background:#BC6700
+}
+.btn-my-page i,
+.omb_btn-facebook i
+{
+  float:left;
+  font-size:44pt;
+  color: #fff !important;
+	opacity:0.9;
+  margin-right:15px;
+}
+
+.navbar .omb_btn-facebook i
+{
+  font-size:14pt;
+  margin:0;
+  padding:0 10px 0 2px;
+}
+
+.btn-my-page strong,
+.omb_btn-facebook strong
+{
+  display:block;
+  text-align:left;
+  font-size:20pt;
+  color:#fff;
+}
+
+.content-about .btn{
+  text-align:left;
+}
+
+.btn-my-page span,
+.omb_btn-facebook span
+{
+  display:block;
+  text-align:left;
+  font-size:16pt;
+  font-weight:300;
+  margin:-2px 0 -6px;
+  color:#fff;
+}
+
+.navbar .omb_btn-facebook span
+{
+  font-size:11pt;
+  margin:-1px 0 0;
+}
+
+#parallaxByeBye,
+#parallaxAbout{
+  height:500px;
+  background-color:#fff;
+  background: url( <%= asset_path 'about.jpg' %> ) 50% 0 fixed;
+  position: relative;
+}
+
+#parallaxByeBye{
+  height:750px;
+  background: url( <%= asset_path 'byebye.jpg' %> ) 50% 0 fixed;
+}
+
+#parallaxByeBye .parallax-text h2,
+#parallaxAbout .parallax-text h2
+{
+  text-align:right;
+  font-size:38pt;
+  margin:150px 30px 0;
+}
+
+#parallaxByeBye .parallax-text h2
+{
+  margin-top:220px;
+}
+
+#parallaxAbout .parallax-text h2 strong
+{
+  display:block;
+}
+
+#parallaxBar{
+  height:600px;
+  background-color:#fff;
+  background: url( <%= asset_path 'copa1440x900.jpg' %> ) 50% 0 fixed;
+  position: relative;
+}
+
+#parallaxBarTwo{
+  height:765px;
+  background-color:#fff;
+  background: url( <%= asset_path 'praia-fut.jpg' %> ) 50% 0 fixed;
+  position: relative;
+}
+
+#parallaxBarThree{
+  height:700px;
+  background-color:#fff;
+  background: url( <%= asset_path 'boite.jpg' %> ) 50% 0 fixed;
+  position: relative;
+}
+
+.parallax-text
+{
+  position:relative;
+  text-align:center;
+}
+
+#parallaxBarTwo .parallax-text,
+#parallaxBarThree .parallax-text
+{
+  top:200px;
+  max-width:720px;
+  margin:0 auto;
+}
+
+#parallaxBarThree .parallax-text
+{
+  max-width:900px;
+}
+
+.parallax-text h3
+{
+  color:#fff;
+  font-size: 32pt;
+  text-shadow: $text-shadow;
+  margin-bottom:20px;
+}
+
+.parallax-text h2
+{
+  color:#fff;
+  font-size: 52pt;
+  text-shadow: $text-shadow;
+  margin-bottom:20px;
+}
+
+.parallax-text h1
+{
+  color:#fff;
+  max-width:580px;
+  line-height:24pt;
+  margin:0 auto;
+  font-size: 16pt;
+  text-shadow: $text-shadow;
+}
+
+#parallaxBar .parallax-text h2,
+#parallaxBarTwo .parallax-text h2,
+#parallaxBarThree .parallax-text h2
+{
+  margin-top:100px;
+  font-size:42pt;
+}
+
+#parallaxBarThree .parallax-text h2
+{
+  margin-top:70px;
+}
+
+.parallax-img
+{
+  display:table;
+  margin:0 auto;
+  width:525px;
+}
+
+.parallax-img img
+{
+  float:left;
+  margin-right:15px;
+  margin-top:15px;
+  box-shadow: $text-shadow;
+  border-radius: $border-radius;
+}
+
+.content-about
+{
+  padding:25px 0;
+}
+
+.content-about h4
+{
+  text-align:center;
+  font-size:24pt;
+  font-weight:700;
+  margin:-20px 0 30px;
+}
+
+.content-about h3
+{
+  text-align:center;
+  font-size:32pt;
+  font-weight:300;
+  margin:20px 0 60px;
+}
+
+.content-about h5
+{
+  text-align:center;
+  font-size:22pt;
+  font-weight:300;
+  margin:-50px auto 60px;
+  width:950px;
+  color:red;
+}
+
+.content-about h3 strong
+{
+  display:block;
+}
+
+.content-about .col-md-1
+{
+  margin-top:55px;
+  color:#e0e0e0;
+}
+
+.content-about div
+{
+  text-align:center;
+  font-size:48pt;
+  display:block;
+  margin:0 auto 30px;
+}
+
+.content-about .people-list
+{
+  margin:30px 0 -20px;
+}
+
+.content-about div i
+{
+  text-align:center;
+  font-size:48pt;
+  display:block;
+}
+
+.content-about div strong.title
+{
+  display:block;
+  text-align:center;
+  font-size:22pt;
+  font-weight:700;
+}
+
+.content-about div p
+{
+  display:block;
+  text-align:center;
+  font-size:14pt;
+  font-weight:300;
+}
+
+.content-about div .fa-facebook-official
+{
+  color:#425F9C;
+}
+
+.content-about div .fa-users
+{
+  color:#ff2500;
+}
+
+.content-about div .fa-trophy
+{
+  color:#ffa500;
+}
+
+.content-about div .fa-user-plus
+{
+  color:#00CCCC;
+}
+
+.content-about div .fa-check
+{
+  color:#00CC00;
+}
+
+.content-about div .fa-check
+{
+  color:#00CC00;
+}
+
+.content-about div .fa-clock-o
+{
+  color:#000;
+}
+
+.content-about .text-centered p
+{
+  font-size:12pt;
+  font-weight:300;
+  color:#666;
+}
+
+.photo-area
+{
+  display:table;
+  width:800px;
+  background:#f0f0f0;
+  margin:0 auto;
+  border:1px solid #c0c0c0;
+}
+
+.profile-area
+{
+  display:table;
+  width:1000px;
+  background:#f0f0f0;
+  margin: 0px auto 20px;
+  border:1px solid #c0c0c0;
+}
+
+.profile-area .pull-left,
+.photo-area .pull-left
+{
+  margin:10px 0;
+  padding:10px 5px;
+  width:455px;
+  text-align:left;
+}
+
+.profile-area .pull-left
+{
+  width: 655px;
+}
+
+.profile-small
+{
+  display:block;
+  position:relative;
+  margin:-5px 10px 0;
+  color:#777;
+}
+
+.photo-area .pull-left h1
+{
+  margin:0 0 10px;
+  padding:0 0 0 10px;
+  text-align:left;
+  font-weight:400;
+  font-size:18pt;
+}
+
+.photo-area .pull-left h5
+{
+  margin:0;
+  padding:0 0 0 10px;
+  text-align:left;
+  font-weight:300;
+  font-size:14pt;
+  color:#000;
+}
+
+.ads-profile
+{
+  padding:12px 0 0 10px;
+}
+
+.person-stats
+{
+  display:table;
+  width:100%;
+  padding:0 0 0 10px;
+  margin-top:-4px;
+  margin-bottom:15px;
+  border-bottom:1px solid #c0c0c0;
+}
+
+.person-stats p
+{
+  float:left;
+  font-size:16pt;
+  color:#a8a8a8;
+  font-weight:300;
+}
+
+.profile-area .person-stats p
+{
+  font-size:28pt;
+}
+
+.person-stats p i
+{
+  position:relative;
+  font-size:14pt;
+  top:-2px;
+}
+
+.profile-area .person-stats p i
+{
+  font-size:26pt;
+}
+
+.person-stats p i.fa-thumbs-down
+{
+  top:-3px;
+}
+
+.person-stats p strong
+{
+  font-weight:800;
+}
+
+.stats-fiu-fiu
+{
+  margin:0 30px 0 2px;
+  //color:#93DB0F
+}
+
+.stats-sai-fora
+{
+  //color:#F27034
+}
+
+.theme-bg
+{
+  width:100%;
+  height:368px;
+  background:#e5e5ff;
+  border-bottom:1px solid #c0c0c0;
+  padding:30px 0 0;
+  margin:0;
+}
+
+.theme-bg.profile
+{
+  height:237px;
+}
+
+.profile-area-title
+{
+  margin:-12px 0 0 8px;
+  padding:0;
+}
+
+.photo-area .btn-group
+{
+  display:block;
+}
+
+.photo-area .btn-group button
+{
+  margin-top:2px;
+  border-radius:0;
+}
+
+.photo-area .btn-group .btn-sai-fora
+{
+  width:165px;
+  padding:15px 0;
+  background:#F27034;
+  font-size:16pt;
+  border:none;
+
+  -webkit-transition: background 0.3s ease-in-out;
+  -moz-transition:background 0.3s ease-in-out;
+  -o-transition: background 0.3s ease-in-out;
+  transition: background 0.3s ease-in-out;
+}
+
+.photo-area .btn-group .btn-fiu-fiu.btn-lock,
+.photo-area .btn-group .btn-sai-fora.btn-lock
+{
+  background:#555;
+  color:#fff;
+}
+
+.photo-area .btn-group .btn-sai-fora:hover
+{
+  background:#D13E00;
+}
+
+.photo-area .btn-group .btn-fiu-fiu.btn-lock:hover,
+.photo-area .btn-group .btn-sai-fora.btn-lock:hover
+{
+  background:#555;
+  cursor:default;
+}
+
+.photo-area .btn-group .btn-sai-fora i
+{
+  position:relative;
+  top:-2px;
+}
+
+.photo-area .btn-group .btn-sai-fora.btn-sai-fora i
+{
+  top:0;
+}
+
+.photo-area .btn-group .btn-fiu-fiu
+{
+  width:164px;
+  margin-right:3px;
+  padding:15px 0;
+  background:#93DB0F;
+  font-size:16pt;
+  border:none;
+
+  -webkit-transition: background 0.3s ease-in-out;
+  -moz-transition:background 0.3s ease-in-out;
+  -o-transition: background 0.3s ease-in-out;
+  transition: background 0.3s ease-in-out;
+}
+
+.photo-area .btn-group .btn-fiu-fiu:hover
+{
+  background:#7FC103;
+}
+
+.photo-border
+{
+  display:table;
+  float:left;
+  width:343px;
+  height:405px;
+  background:#fff;
+  padding:5px;
+  border-right:1px solid #c0c0c0;
+}
+
+.profile-area .photo-border
+{
+  height:343px;
+}
+
+.photo-border img
+{
+  width:331px;
+}
+
+.photo-border .photo-user
+{
+  width:331px;
+  height:331px;
+  overflow:hidden;
+  display:block;
+}
+
+.suggest-users
+{
+  display:none
+}
+
+.suggest-users a
+{
+  float:left;
+  border-left:1px solid #fff;
+  border-bottom:1px solid #fff;
+  width:110px;
+  height:110px;
+  overflow:hidden;
+}
+
+.suggest-users h4
+{
+  font-size:22pt;
+  font-weight:300;
+  text-align:center;
+  left:0;
+  padding:0 0 10px;
+  color:#777;
+}
+
+.suggest-users a img
+{
+  width:110px;
+  -webkit-transition: opacity  0.5s ease-in-out;
+  -moz-transition:opacity  0.5s ease-in-out;
+  -o-transition: opacity  0.5s ease-in-out;
+  transition: opacity  0.5s ease-in-out;
+}
+
+.suggest-users a:hover img
+{
+  opacity:0.3;
+}
+
+.people-access
+{
+  margin:-15px 0 15px 0;
+  padding:0 0 0 10px;
+  border-bottom:1px solid #c0c0c0;
+  height:65px;
+  width: 444px;
+}
+
+.profile-area .people-access
+{
+  margin-top:30px;
+  width: 645px;
+}
+
+.profile-area .people-access div
+{
+  display:table;
+  float:left;
+  padding-right:20px;
+}
+
+.people-access i
+{
+  display:block;
+  padding:10px 6px 0 0;
+  float:left;
+  font-size:43px;
+  color:#00CCCC;
+}
+
+.people-access p
+{
+  float:left;
+  line-height: 1.1;
+  margin:0;
+  padding:0;
+}
+
+.people-access strong
+{
+  display:block;
+  float:left;
+  font-size:52px;
+  color:#00CCCC;
+  margin:1px 4px 0 0;
+  padding:0;
+  line-height:auto;
+}
+
+.people-access span
+{
+  display:block;
+  float:left;
+  color:#00CCCC;
+  font-size:24pt;
+  font-weight:300;
+  margin:-2px 0 0 0;
+}
+
+.people-access b
+{
+  display:block;
+  color:#00CCCC;
+  margin-top:-4px;
+  font-size:16pt;
+}
+
+.people-others
+{
+  display:table;
+  width:100%;
+  margin:60px 0 0;
+  padding:0 0 40px;
+  background:#f0f0f0;
+  border-top:1px solid #c0c0c0;
+  border-bottom:1px solid #c0c0c0;
+}
+
+.people-others h3
+{
+  font-size:26pt;
+}
+
+.person-card
+{
+  display:block;
+  width:200px;
+  height:200px;
+}
+
+.person-card a
+{
+  display:block;
+  width:200px;
+  height:200px;
+  overflow: hidden;
+  border:1px solid #c0c0c0;
+}
+
+.person-card a img
+{
+  width:198px;
+  -webkit-transition: opacity  0.6s ease-in-out;
+  -moz-transition:opacity  0.6s ease-in-out;
+  -o-transition: opacity  0.6s ease-in-out;
+  transition: opacity  0.6s ease-in-out;
+}
+
+.person-card:hover a img
+{
+  opacity:0.3
+}
+
+.person-card a span
+{
+  position:absolute;
+  background:#000;
+  left:7px;
+  top:-7px;
+  padding:7px 10px;
+  font-size:10pt;
+  color:#fff;
+  z-index:2;
+  -webkit-transition: top 0.5s ease-in-out;
+  -moz-transition:top 0.5s ease-in-out;
+  -o-transition: top 0.5s ease-in-out;
+  transition: top 0.5s ease-in-out;
+}
+
+.person-card:hover a span
+{
+  top:40%;
+  left:7px;
+  width:180px;
+  text-align:left;
+  opacity:1;
+}
+
+.people-search
+{
+  margin:15px 0 -15px 0;
+  width: 100%;
+}
+
+.people-search h1
+{
+    font-weight:300;
+}
+
+.people-search small
+{
+  display:block;
+  text-align:center;
+  width:100%;
+  margin-top:-10px;
+  color:#888;
+  font-size:12pt;
+}
+
+.modal-connect-facebook
+{
+  text-align:center;
+  font-size:16pt;
+  color:#888;
+  margin:15px 50px 0;
+}
+
+.create_username-title h1,
+.page-title h1
+{
+  background:#f0f0f0;
+  font-weight:300;
+  font-size:32pt;
+  padding:30px 0 30px;
+  margin:0px 0 20px;
+  border-bottom:1px solid #c0c0c0;
+}
+
+.card-color
+{
+  display:table;
+  width:100%;
+  margin-top:-20px;
+  padding:50px 0 100px;
+  background:#9AD1CE;
+}
+
+.card-username
+{
+  width:510px;
+  margin:0 auto;
+  text-align:center;
+}
+
+.card-username h2
+{
+  text-align:left;
+  font-weight:300;
+  margin:35px 0 10px;
+}
+
+.card-username .form-group
+{
+  float:left;
+}
+
+.card-username .form-group small
+{
+  display:block;
+  margin-top:10px;
+  text-align:left;
+  color:#1D7C6E;
+}
+
+.card-username input
+{
+  border-radius:none;
+  width:400px;
+  border:1px solid #c0c0c0;
+}
+
+.card-username button
+{
+  float:left;
+  width:100px;
+  margin-left:5px;
+}
+
+.card-username .msg-error
+{
+  display:block;
+  text-align:left;
+  color:#840000;
+  margin:10px 0 5px;
+}
+
+.card-skip
+{
+  display:block;
+  float:right;
+  margin:0 auto;
+  padding:20px;
+  background:#5BABA0;
+  color:#fff;
+}
+
+.card-skip:hover
+{
+  color:#fff;
+}
+
+.layout-null
+{
+  border-top:13px solid #5BABA0
+}

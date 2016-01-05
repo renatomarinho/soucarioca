@@ -1,0 +1,50 @@
+# Files in the config/locales directory are used for internationalization
+# and are automatically loaded by Rails. If you want to use locales other
+# than English, add the necessary files in this directory.
+#
+# To use the locales, use `I18n.t`:
+#
+#     I18n.t 'hello'
+#
+# In views, this is aliased to just `t`:
+#
+#     <%= t('hello') %>
+#
+# To use a different locale, set it with `I18n.locale`:
+#
+#     I18n.locale = :es
+#
+# This would use the information in config/locales/es.yml.
+#
+# To learn more, please read the Rails Internationalization guide
+# available at http://guides.rubyonrails.org/i18n.html.
+
+en:
+  hello: "Hello world"
+  peoplesearch:
+      zero: "Não encontramos ninguém"
+      one: "Encontramos 1 pessoa"
+      other: "Encontramos %{count} pessoas"
+  peopleaccess:
+      zero : "<span>você é o(a) primeiro(a)<b>que acessou essa pessoa</b></span>"
+      one: "<strong>1</strong><span>pessoa <b>acessou</b></span>"
+      other: "<strong class=\"number-count\">%{count}</strong><span>pessoas <b>acessaram</b></span>"
+  peopleaccesstoday:
+      zero : "<span>ninguém<b>acessou</b></span>"
+      one: "<strong>1</strong><span>pessoa <b>acessou hoje</b></span>"
+      other: "<strong>%{count}</strong><span>pessoas <b>acessaram hoje</b></span>"
+  peoplecariocou:
+      zero : "<strong>Ninguém ainda Cariocou você.</strong><span>Convide seus amigos e entre para o jogo!</span>"
+      one: "<strong>%{count} pessoa Cariocou você.</strong><span>O que acha de Cariocar também?</span>"
+      other: "<strong>%{count} pessoas Cariocaram você.</strong><span>O que acha de Carioca-las também?</span>"
+  peoplecariocoulack:
+      zero : "Não falta nenhuma Cariocada para você"
+      one: "Ainda falta 1 Cariocada para você"
+      other: "Ainda faltam %{count} Cariocadas para você"
+  views:
+      pagination:
+        first: "&laquo;"
+        last: "&raquo;"
+        previous: "&lsaquo;"
+        next: "&rsaquo;"
+        truncate: "&hellip;"

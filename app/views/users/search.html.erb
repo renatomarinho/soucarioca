@@ -1,0 +1,30 @@
+<% content_for(:title, "#{t('peoplesearch', :count => @totalUsers)} para você Cariocar - Página #{@page}" ) %>
+
+<div class="container people-search">
+
+  <h1 class="text-center"><%= t('peoplesearch', :count => @totalUsers) %> para você <strong>Cariocar</strong></h1>
+  <% if @totalUsers > 0 %>
+  <small>você está vendo as pessoas da página <%= @page%></small>
+  <% end %>
+
+</div>
+
+<section class="people-others">
+
+  <div class="container">
+
+    <div class="content-about">
+
+      <div class="people-list">
+
+        <%= render partial: "list", locals: { users: @users } %>
+
+        <%= paginate @users %>
+
+      </div>
+
+    </div>
+
+  </div>
+
+</section>

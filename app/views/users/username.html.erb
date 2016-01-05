@@ -1,0 +1,35 @@
+<div class="create_username-title">
+
+  <h1 class="text-center">Bem vindo, o jogo vai começar!</h1>
+
+</div>
+
+<div class="card-color">
+
+  <div class="card-username">
+
+    <h2>Escolha o nome de usuário</h2>
+
+    <form action="/user/username_update" method="post" >
+
+      <%= hidden_field_tag :authenticity_token, form_authenticity_token -%>
+
+      <div class="form-group">
+
+        <input type="text" class="form-control input-lg" name="username" id="username" maxlength="30" value="<%= @user.username %>" placeholder="Pense um nome bem legal para você" />
+
+        <p class="msg-error"></p>
+
+        <small>* Não utilize espaço ou caracteres especiais</small>
+
+      </div>
+
+      <button name="button" class="btn btn-lg btn-primary">Continuar</button>
+
+  </div>
+
+</div>
+
+<% if @user.username_manual == 0 %>
+<a href="/user/profile" class="card-skip">Escolher depois o nome de usuário</a>
+<% end %>
